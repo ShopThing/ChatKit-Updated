@@ -138,7 +138,7 @@ public class MessageInput extends RelativeLayout
     @Override
     public void onTextChanged(CharSequence s, int start, int count, int after) {
         input = s;
-        messageSendButton.setEnabled(input.length() > 0);
+        messageSendButton.setEnabled(input.length() > 0 && !input.toString().trim().isEmpty());
         if (s.length() > 0) {
             if (!isTyping) {
                 isTyping = true;
